@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :decisions, only: [:index, :new, :create, :destroy, :edit]
-  resources :criteria, only: [:index, :new, :create, :destroy]
+  resources :decisions, only: [:index, :new, :create, :destroy, :edit] do
+    resources :criteria, only: [:index, :new, :create, :destroy]
+  end
 
   get 'users' => 'users#index', as: :users
   get 'users/new' => 'users#new', as: :new_user

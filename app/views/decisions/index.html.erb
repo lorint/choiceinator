@@ -3,7 +3,7 @@
 <ul>
 <% @decisions.each do |d| %>
 	<li>
-		<%= link_to d.text, new_criterion_path %>
+		<%= link_to d.text, decision_criteria_path(d.id) %>
 		<%= button_to "X", decision_path(d.id), method: :delete %>
 	</li>
 <% end %>
