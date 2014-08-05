@@ -1,0 +1,7 @@
+<h1>Users#new</h1>
+
+<%= form_for @user do |f| %>
+	<%= f.text_field :name, placeholder: "WHO ARE YOU????" %>
+	<%= f.text_field :email, placeholder: "your super secret email address..  we will be spamming.." %>
+	<%= f.submit %>
+<% end %>

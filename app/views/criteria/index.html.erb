@@ -1,0 +1,10 @@
+<h1>Criteria#index</h1>
+
+<ul>
+<% @criteria.each do |c| %>
+	<li>
+		<b><%= c.text %></b> for the decision <b><%= c.decision.text %></b>
+		<%= button_to "X", criterion_path(c.id), method: :delete %>
+	</li>
+<% end %>
+</ul>
