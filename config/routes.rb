@@ -3,6 +3,11 @@ Rails.application.routes.draw do
     resources :criteria, only: [:index, :new, :create, :destroy]
   end
 
+  get 'decisions/home' => 'decisions#home', as: :home
+  root 'decisions#home'
+
+  resource :session, only: [:new, :create, :destroy]
+
   get 'users' => 'users#index', as: :users
   get 'users/new' => 'users#new', as: :new_user
   post 'users' => 'users#create'

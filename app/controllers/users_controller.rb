@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
   # Spike
   def create
-    user = User.new(params.require(:user).permit(:name, :email, :password))
+    user = User.new(params.require(:user).permit(:name, :email, :password, :password_confirmation))
     if user.save
       redirect_to users_path
     end

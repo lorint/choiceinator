@@ -2,6 +2,5 @@
 
 <%= form_for @decision do |f| %>
 	<%= f.text_field :text, placeholder: "What's the big choice????" %>
-	<%= f.collection_select :user_id, User.all, :id, :name %>
 	<%= f.submit %>
 <% end %>
